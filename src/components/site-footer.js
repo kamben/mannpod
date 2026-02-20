@@ -25,15 +25,20 @@ export default function SiteFooter({ visPlattformer = true }) {
           <>
             <p className="text-xl font-semibold text-white">{"Abonner og f\u00f8lg:"}</p>
             <div className="grid w-full max-w-xl grid-cols-2 gap-3 sm:grid-cols-4">
-              {plattformer.map((plattform) => (
-                <a
-                  key={plattform.navn}
-                  href="#"
-                  className="rounded-md bg-[#2f3f68] px-3 py-5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-[#415791]"
-                >
-                  {plattform.navn}
-                </a>
-              ))}
+              {plattformer.map((plattform) => {
+                const external = plattform.lenke !== "#";
+                return (
+                  <a
+                    key={plattform.navn}
+                    href={plattform.lenke}
+                    className="rounded-md bg-[#2f3f68] px-3 py-5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-[#415791]"
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                  >
+                    {plattform.navn}
+                  </a>
+                );
+              })}
             </div>
           </>
         ) : null}

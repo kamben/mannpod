@@ -6,10 +6,10 @@ export const navItems = [
 ];
 
 export const plattformer = [
-  { navn: "iTunes" },
-  { navn: "Spotify" },
-  { navn: "Google" },
-  { navn: "Stitcher" },
+  { navn: "Buzzsprout", lenke: "https://www.buzzsprout.com/2298471/episodes" },
+  { navn: "Spotify", lenke: "https://open.spotify.com/show/2YpuFbnU5QTFrclQj05BxC" },
+  { navn: "YouTube", lenke: "#" },
+  { navn: "Facebook", lenke: "https://www.facebook.com/profile.php?id=61555513795691" },
 ];
 
 export const socialLinks = [
