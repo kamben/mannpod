@@ -11,3 +11,31 @@ export const plattformer = [
   { navn: "Google" },
   { navn: "Stitcher" },
 ];
+
+export const socialLinks = [
+  {
+    navn: "Buzzsprout",
+    href: "https://www.buzzsprout.com/2298471/episodes",
+    ikon: "buzzsprout",
+  },
+  {
+    navn: "Spotify",
+    href: "https://open.spotify.com/show/2YpuFbnU5QTFrclQj05BxC",
+    ikon: "spotify",
+  },
+  {
+    navn: "Apple Podcasts",
+    href: "#",
+    ikon: "apple",
+  },
+  {
+    navn: "YouTube",
+    href: "#",
+    ikon: "youtube",
+  },
+  {
+    navn: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61555513795691",
+    ikon: "facebook",
+  },
+];

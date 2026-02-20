@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SocialLinks from "./social-links";
 import { plattformer } from "./site-data";
 
 export default function SiteFooter({ visPlattformer = true }) {
@@ -37,9 +38,12 @@ export default function SiteFooter({ visPlattformer = true }) {
           </>
         ) : null}
 
-        <div className="flex items-center gap-3 border-t border-white/20 pt-6">
-          <Image src="/logo.png" alt="MANNPOD logo" width={34} height={34} />
-          <p className="text-sm text-white/85">MANNPOD</p>
+        <div className="flex flex-col items-center gap-3 border-t border-white/20 pt-6">
+          <div className="flex items-center gap-3">
+            <Image src="/logo.png" alt="MANNPOD logo" width={34} height={34} />
+            <p className="text-sm text-white/85">MANNPOD</p>
+          </div>
+          <SocialLinks />
         </div>
       </div>
     </footer>

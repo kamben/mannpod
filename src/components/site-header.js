@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SocialLinks from "./social-links";
 import { navItems } from "./site-data";
 
 export default function SiteHeader({ className = "" }) {
@@ -19,12 +20,15 @@ export default function SiteHeader({ className = "" }) {
           ))}
         </nav>
 
-        <a
-          href="#"
-          className="rounded-md bg-[#2f3f68] px-4 py-2 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-[#415791]"
-        >
-          {"Gi St\u00f8tte"}
-        </a>
+        <div className="flex items-center gap-3">
+          <SocialLinks className="hidden md:flex" />
+          <a
+            href="#"
+            className="rounded-md bg-[#2f3f68] px-4 py-2 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-[#415791]"
+          >
+            {"Gi St\u00f8tte"}
+          </a>
+        </div>
       </div>
 
       <nav className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-4 px-6 pb-4 text-sm font-semibold text-white/90 md:hidden">
@@ -33,6 +37,7 @@ export default function SiteHeader({ className = "" }) {
             {item.label}
           </Link>
         ))}
+        <SocialLinks />
       </nav>
     </header>
   );
